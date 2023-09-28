@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Fredoka One', cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.backgroundImage{
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    background: no-repeat center 0/cover;
+    background-image:url(./assets/pxfuel.jpg);
+    z-index: -1;
+}
+
+.titleContainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 20px;
+
+}
+
+.title {
+    width: 20%;
+    min-width: 270px;
+ 
+}
+
+.seleccionarPokemon{
+ 
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:  #2575bb8d;
+    padding: 0px 20px;
+    margin: 0 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.tarjetasPokemonContainer, .botonAtaqueContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    
+}
+
+
+.tarjetaPokemon{
+    background-color: orange;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 280px;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.tarjetaPokemon:hover img{  
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out; 
+}
+
+.tarjetaPokemon:hover {  
+    opacity: 1;
+}
+
+.tarjetaPokemon img {
+    width:10vw;
+    min-width: 100px;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    opacity: 1;
+ }
+
+
+.botonSelect{
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.456);
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateY(0px) scale(1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 15px;
+    
+}
+
+.botonSelect:hover {
+    transform: translateY(5px) scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px -5px 5px 0px black
+}
+
+
+.seleccionarAtaque {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subTitle{
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.botonAtaque{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    opacity: 0.5;
+}
+
+.botonAtaque:hover {
+    opacity: 1;
+}
+
+.seleccionarAtaque div .botonAtaque:nth-child(1){
+    background-color: rgba(255, 0, 0, 0.600);
+}
+
+.seleccionarAtaque div .botonAtaque:nth-child(2){
+    background-color: rgba(0, 0, 255, 0.600)
+}
+
+.seleccionarAtaque div .botonAtaque:nth-child(3){
+    background-color: rgba(172, 255, 47, 0.600)
+}
+
+#mensajes {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.456);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+#boton-reload {
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100px;
+    color: blue;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.resultadosContainer{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.resultados{
+    width: 200px;
+    
+    background-color: rgba(0, 0, 0, 0.451);
+    border-radius: 10px; 
+    color: white;
+}
+
+
+.nombrePokemon{
+    font-weight: bold;
+}
+
+#imagen-Pokemon {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 0, 0, 0.599);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    border-radius: 10px;
+    animation: 1s poke1 ease-in-out ;
+}
+
+@keyframes poke1 {
+    0% {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#imagen-Pokemon2{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 255, 0.599);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    animation: 1s poke2 ease-in-out ;
+}
+
+@keyframes poke2 {
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.imgene{
+    width: 200px;   
+}
+
+
+#mapaContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa {
+ border: 2px solid white;   
+}
+
+@media (max-width: 600px) {
+
+    body {
+        align-items: end;
+    }
+    .seleccionarPokemon{
+        margin-top: 50px;
+    }
+
+    .title {
+        width: 60%;   
+        margin-bottom: 10px;
+    }
+
+    .subTitle{
+        font-size: 16px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .botonAtaqueContainer{
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 5px;
+    }
+    .botonAtaque{
+        width: 50px;
+        height: 50px;    
+    }
+
+    .resultados{
+        width: 150px;
+        height: 50vh;
+        background-color: rgba(0, 0, 0, 0.451);
+        border-radius: 10px; 
+        color: white;
+    }
+
+    #imagen-Pokemon {
+        width: 150px;
+        height: 150px;
+        background-color: rgba(255, 0, 0, 0.599);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        
+        border-radius: 10px;
+        animation: 1s poke1 ease-in-out ;
+    }
+    
+    @keyframes poke1 {
+        0% {
+            transform: translateY(-500px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .imgene{
+        width: 150px;   
+    }
+    
+    #imagen-Pokemon2{
+        width: 150px;
+        height: 150px;
+        background-color: rgba(0, 0, 255, 0.599);
+    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        
+        border-radius: 10px;
+        overflow: hidden;
+        animation: 1s poke2 ease-in-out ;
+    }
+    
+    @keyframes poke2 {
+        0% {
+            transform: translateY(500px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    
+
+}

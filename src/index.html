@@ -29,6 +29,32 @@
         <div class="tarjetasPokemonContainer" id="tarjetasContainer"></div>
         <button id="boton-pokemon" class="botonSelect">Seleccionar</button>
     </section>
-    <script src="./pokemon.js"></script> 
+    <section id="select-attack" class="seleccionarAtaque">
+        <h2 class="subTitle">SELECCIONAR ATAQUE</h2>
+        <div class="botonAtaqueContainer" id="contenedorAtaques"></div>  
+        <div id="mensajes">
+            <p id="parrafoMiResultado">BATALLA POKEMON!</p>
+            <section id="reiniciar">
+                <button id="boton-reload">Reiniciar</button>
+            </section>
+        </div> 
+        <div class="resultadosContainer">
+            
+            <div class="resultados">
+                <p id="vida-jugador" class="vidasPokemon">0</p>
+                <p id="pokemon-jugador" class="nombrePokemon"></p>
+                <div id="parrafoAtaqueJugador"></div>
+                <div id="imagen-Pokemon"></div>    
+            </div>
+            <div class="resultados">
+                <p id="vida-enemigo" class="vidasPokemon">0</p>
+                <p id="pokemon-enemigo" class="nombrePokemon"></p>
+                <div id="parrafoAtaqueEnemigo"></div>
+                <div id="imagen-Pokemon2"></div>     
+            </div>      
+        </div>          
+    </section>
+
+    <script src="./main.js"></script> 
 </body>
 </html>
